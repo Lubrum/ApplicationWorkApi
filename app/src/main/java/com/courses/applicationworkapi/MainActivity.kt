@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData() {
-        val call: Call<List<Product>> =
-            MyRetrofit.instance?.productApi()?.getProductApi() as Call<List<Product>>
+        val call: Call<List<Product>> = MyRetrofit.instance?.productApi()?.getProductApi() as Call<List<Product>>
+
         call.enqueue(object : Callback<List<Product>> {
             override fun onFailure(call: Call<List<Product>>, t: Throwable) {
                 Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_LONG).show()
@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 val adapter = ProductAdapter(this@MainActivity, response.body()?.toList() as List<Product>)
                 recycleProducts.adapter = adapter
             }
-
         })
     }
 }

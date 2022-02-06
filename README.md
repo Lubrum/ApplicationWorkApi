@@ -11,3 +11,5 @@ Resumo dos conceitos abordados:
 - Glide para imagens
 - Consumo de APIs
 
+Obs: a api que este projeto utiliza não está mais funcional.
+
